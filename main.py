@@ -40,7 +40,7 @@ m_test_erosion = [
 ]
 
 if __name__ == "__main__":
-    a = GrayscaleMorphMatrix()
+    a = GrayscaleMorphMatrix.from_image("test_img.jpg")
     kernel = KernelElement(
         np.ones((10, 10)), [12, 12],
     )

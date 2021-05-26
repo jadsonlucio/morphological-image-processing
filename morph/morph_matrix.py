@@ -1,6 +1,10 @@
 import numpy as np
+import matplotlib
 import matplotlib.pyplot as plt
 from morph.kernel_elements.kernel_element import KernelElement
+
+
+matplotlib.rcParams["backend"] = "TkAgg"
 
 
 class MorphMatrix:

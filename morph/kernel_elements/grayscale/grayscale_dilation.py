@@ -10,12 +10,10 @@ class GrayScaleFlatDilation(KernelElement):
         copy_data = grayscale_matrix.copy().data
         m = grayscale_matrix
         w, h = copy_data.shape
-        print(copy_data.shape)
         for i in range(w):
             for j in range(h):
-                print(i,j)
                 try:
-                    copy_data[j, i] = min(
+                    copy_data[j, i] = max(
                         map(
                             lambda p: data[p[1], p[0]],
                             self.x_y_points(i, j, m.width, m.height),
